@@ -4,24 +4,23 @@ import './App.css';
 import Header from "./components/Header";
 import Content from "./components/Content";
 class App extends Component{
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            header: "Header from state...",
-            content: "Content from state..."
-        }
-    }
-  render() {
+    render() {
       return (
           <div className="App">
               <div>
-                  <Header headerProp = {this.state.header}/>
-                  <Content contentProp = {this.state.content}/>
+                  <h1>{this.props.headerProp}</h1>
+                  <h2>{this.props.contentProp}</h2>
               </div>
           </div>
       );
-  }
+    }
+}
+
+// export default App;
+
+App.defaultProps = {
+    headerProp: "Header from props...",
+    contentProp:"Content from props..."
 }
 
 export default App;
