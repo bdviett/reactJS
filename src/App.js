@@ -1,13 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ClassComponent from "./components/ClassComponent";
-class App extends Component{
-    render() {
-        return (
-            <ClassComponent />
-        )
-    }
-}
+import FunctionComponent from "./components/FunctionComponent";
 
+const App = () => (
+    <div>
+        <h1>Hello</h1>
+    </div>
+);
 export default App;

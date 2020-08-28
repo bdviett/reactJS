@@ -1,0 +1,6 @@
+Vậy 1 React Functional Component là:
+
+một function Javascript / ES6 function
+phải trả về 1 React element
+nhận props làm tham số nếu cần
+
