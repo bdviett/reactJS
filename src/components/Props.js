@@ -2,8 +2,10 @@ import React, {Component} from "react";
 
 class Props extends Component {
     render() {
-        element,
-        return <h1>Hello {this.props.name}</h1>
+        return (
+            element,
+            <h1>Hello {this.props.name}</h1>
+        );
     }
 }
 
