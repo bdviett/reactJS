@@ -1,51 +1,36 @@
 import React, {Component} from 'react';
-// import PropTypes from 'prop-types';
-import PropTypes from  'prop-types';
-import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
-import Header from "./components/Header";
-import Content from "./components/Content";
+import StudentName from "./components/Student/StudentName";
+import List from "./components/Student/List";
 class App extends Component{
+    constructor(props) {
+        super(props)
+        this.state = { date: new Date() }
+    }
+
+    componentDidMount() {
+        this.time = setInterval(() => {
+            this.changeTime()
+        }, 1000)
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.time)
+    }
+
+    changeTime() {
+        this.setState({ date: new Date() })
+    }
+
     render() {
-      return (
-          <div>
-              <h3>Array: {this.props.propArray}</h3>
-              <h3>Bool: {this.props.propBool ? "True..." : "False..."}</h3>
-              <h3>Func: {this.props.propFunc(3)}</h3>
-              <h3>Number: {this.props.propNumber}</h3>
-              <h3>String: {this.props.propString}</h3>
-              <h3>Object: {this.props.propObject.objectName1}</h3>
-              <h3>Object: {this.props.propObject.objectName2}</h3>
-              <h3>Object: {this.props.propObject.objectName3}</h3>
-          </div>
-      );
-    }
-}
-App.propTypes = {
-    propArray: PropTypes.array.isRequired,
-    propBool: PropTypes.bool.isRequired,
-    propFunc: PropTypes.func,
-    propNumber: PropTypes.number,
-    propString: PropTypes.string,
-    propObject: PropTypes.object
-}
-
-App.defaultProps = {
-    propArray: [1,2,3,4,5],
-    propBool: true,
-    propFunc: function(e){return e},
-    propNumber: 1,
-    propString: "String value...",
-
-    propObject: {
-        objectName1:"objectValue1",
-        objectName2: "objectValue2",
-        objectName3: "objectValue3"
+        return (
+            <div className="clock">
+                <h1>Hello! This is a class component clock.</h1>
+                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+            </div>
+        )
     }
 }
 
-App.contextType = {
-
-}
 export default App;
