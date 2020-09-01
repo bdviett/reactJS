@@ -1,1 +1,0 @@
-//component gets and displays data

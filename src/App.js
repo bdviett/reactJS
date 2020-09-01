@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 
-import AddComponent from "./components/AddComponent"
-import EditComponent from "./components/EditComponent"
-import ListComponent from "./components/ListComponent"
+import AddJob from "./components/AddJob"
+import EditJob from "./components/EditJob"
+import ListJob from "./components/ListJob"
 
 class App extends Component{
     render () {
@@ -32,9 +32,9 @@ class App extends Component{
 
                     <div className="container mt-3">
                         <Switch>
-                            <Router exact path={["/", "/list"]} component={ListComponent} />
-                            <Router exact path="/add" component={AddComponent} />
-                            <Router path="/edit/:id" component={EditComponent} />
+                            <Router exact path={["/", "/list"]} component={ListJob} />
+                            <Router exact path="/add" component={AddJob} />
+                            <Router path="/edit/:id" component={EditJob} />
                         </Switch>
                     </div>
                 </div>

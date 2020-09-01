@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import DataService from "../services/DataService";
 
-export default class AddComponent extends Component {
+export default class AddJob extends Component {
     constructor(props) {
         super(props);
 
@@ -33,7 +33,7 @@ export default class AddComponent extends Component {
     }
 
     saveJob() {
-        var data = {
+        let data = {
             title: this.state.title,
             description: this.state.description
         };
@@ -72,22 +72,21 @@ export default class AddComponent extends Component {
                       <h4>
                           You submitted successfully !
                       </h4>
-
-                      <button className="btn btn-success" onclick={this.newJob}>
+                      <button className="btn btn-success" onClick={this.newJob}>
                           Add
                       </button>
                   </div>
               ) : (
                   <div>
                       <div className="form-group">
-                          <label htmlFor="title"></label>
+                          <label htmlFor="title">Title</label>
                           <input
                               type="text"
                               className="form-control"
                               id="title"
                               required
                               value={this.state.title}
-                              onchange={this.onChangeTitle}
+                              onChange={this.onChangeTitle}
                               name="title"
                           />
                       </div>
