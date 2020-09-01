@@ -1,0 +1,1 @@
+//component has form for editing details based on :id.
