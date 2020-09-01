@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Greet from "./components/Greet";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   return (
     <div className="App">
-      <Greet/>
+        <h1>Hello React JS</h1>
     </div>
   );
 }
